@@ -1,3 +1,5 @@
+import enviroment from "./config.js"
+
 const API = "https://api.github.com/users/pamela2453"
 
 const fetchData = async (url) => {
@@ -5,7 +7,7 @@ const fetchData = async (url) => {
         let opcions = {
             "headers":
             {
-                "Authorization": "token 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"
+                "Authorization": `token ${enviroment.TOKEN_GITHUB}`
             }
         }
         let response = await fetch(url, opcions);
